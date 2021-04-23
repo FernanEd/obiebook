@@ -1,0 +1,24 @@
+GET http://localhost:4001/api/diplomados/
+
+###
+
+POST http://localhost:4001/api/diplomados
+Content-Type: application/json
+
+{
+  "diplomado": "Diplomado 4"
+}
+
+###
+
+DELETE http://localhost:4001/api/diplomados/60626223acf17d23e6fb6d78
+
+
+###
+
+PUT http://localhost:4001/api/diplomados/606262bbacf17d23e6fb6d79
+Content-Type: application/json
+
+{
+  "diplomado": "aaa"
+}

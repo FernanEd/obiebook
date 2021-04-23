@@ -1,0 +1,39 @@
+GET http://localhost:4001/api/areas/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNzFkZTYzZmFiMGY5MTkzN2JlODRmZSIsImlhdCI6MTYxODE2OTUwNiwiZXhwIjoxNjE4MjU1OTA2fQ.LljzUrEbDIKn3wzvQkmhhDMzQ96XLP7uMl5zTdzEFUY
+
+###
+
+
+
+GET http://localhost:4001/api/areas
+
+###
+
+POST http://localhost:4001/api/areas
+Content-Type: application/json
+
+{
+  "area": "Test 4"
+}
+
+###
+
+DELETE http://localhost:4001/api/areas/605e52305fce88256922cc86
+
+
+###
+
+PUT http://localhost:4001/api/areas/606a682d3ee07763b461a84e
+Content-Type: application/json
+
+{
+  "area": "Test ochenta"
+}
+
+
+###
+
+DELETE http://localhost:4001/api/areas/
+
+
+###

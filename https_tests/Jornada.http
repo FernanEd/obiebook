@@ -1,0 +1,52 @@
+GET http://localhost:4001/api/jornadas/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNzFkZTYzZmFiMGY5MTkzN2JlODRmZSIsImlhdCI6MTYxODA4MTMxMSwiZXhwIjoxNjE4MTY3NzExfQ.Ts0BTj_HBoI1KFJAAahBncFeQIo4O9y8sFSh6pkw3Rc
+
+###
+
+POST http://localhost:4001/api/jornadas
+Content-Type: application/json
+
+{
+  "tipo": "diplomado",
+  "fecha": {
+    "inicio": "2021-03-31T03:40:09.175Z",
+    "fin": "2021-03-31T03:40:09.175Z"
+  },
+  "contenido": {
+    "cursos": [],
+    "diplomados": ["606e505caa97614687d899da", "606e5060aa97614687d899db"]
+  }
+}
+
+
+###
+
+DELETE http://localhost:4001/api/jornadas/6063f1b469919035d3f15700
+
+
+###
+
+PUT http://localhost:4001/api/jornadas/6063f10769919035d3f156ff
+Content-Type: application/json
+
+{
+  "tipo": "diplomado",
+  "fecha": {
+    "inicio": "2021-03-31T03:40:09.175Z",
+    "fin": "2021-03-31T03:40:09.175Z"
+  },
+  "contenido": {
+    "cursos": [],
+    "diplomados": []
+  }
+}
+
+###
+
+POST http://localhost:4001/api/jornadas/606f8e36b47c9f47aca11f10/agregardiplomado
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjI3MzhlNmI0OWY2MzFkODY1ZTY1NiIsImlhdCI6MTYxNzkyMjY1OCwiZXhwIjoxNjE4MDA5MDU4fQ.s5uLR4KgMjW_Hblb-9blcWPuPFvbhQK4klSl3JLwbdE
+Content-Type: application/json
+
+{
+  "id": "606e505caa97614687d899da"
+}

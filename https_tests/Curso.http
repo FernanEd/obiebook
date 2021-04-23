@@ -1,0 +1,24 @@
+GET http://localhost:4001/api/cursos/
+
+###
+
+POST http://localhost:4001/api/cursos
+Content-Type: application/json
+
+{
+  "curso": "Curso 4"
+}
+
+###
+
+DELETE http://localhost:4001/api/cursos/60625af7de03b81a9bb530e4
+
+
+###
+
+PUT http://localhost:4001/api/cursos/60625ae7de03b81a9bb530e2
+Content-Type: application/json
+
+{
+  "curso": "Curso dos"
+}
