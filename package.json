@@ -28,5 +28,14 @@
     "ts-node-dev": "^1.1.6"
   },
   "author": "Fernando_Ed <fernaned.bm@gmail.com>",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FernanEd/obiebook.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/FernanEd/obiebook/issues"
+  },
+  "homepage": "https://github.com/FernanEd/obiebook#readme"
 }
