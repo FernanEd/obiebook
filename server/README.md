@@ -1,3 +1,0 @@
-# obiebook
-
-A Social app.

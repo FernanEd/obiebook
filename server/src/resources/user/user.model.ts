@@ -8,6 +8,7 @@ export interface IUser extends Document {
 const UserSchema = new Schema({
   username: { type: String, required: true },
   password: { type: String, required: true },
+  friends: { type: [Types.ObjectId], ref: "User", required: true, default: [] },
 });
 
 export default model<IUser>("User", UserSchema);

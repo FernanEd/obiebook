@@ -1,6 +1,8 @@
 import express from "express";
 import config from "./utils/config";
 import mongoose from "mongoose";
+import passport from "passport";
+import { Strategy as FacebookStrategy } from "passport-facebook";
 
 const app = express();
 
