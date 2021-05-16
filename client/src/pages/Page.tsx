@@ -8,7 +8,7 @@ const Page: React.FunctionComponent<Props> = ({ children }) => {
   return (
     <>
       <Header />
-      <main>{children}</main>
+      <main className="bg-neutral-200 flex-1">{children}</main>
       <Footer />
     </>
   );

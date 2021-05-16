@@ -6,6 +6,7 @@ import {
   MeetingRoom,
 } from "@material-ui/icons";
 import Button from "../common/Button";
+import { Link } from "react-router-dom";
 
 interface Props {}
 
@@ -27,19 +28,27 @@ const Header: React.FunctionComponent<Props> = () => {
         Obiebook
       </div>
       <nav className="flex gap-2 items-center">
-        <Button isGhost={true}>
-          <LibraryBooks />
-          News
-        </Button>
-        <Button isGhost={true}>
-          <GroupAdd />
-          Friend Requests
-        </Button>
-        <Button isGhost={true}>
-          <AccountCircle />
-          My profile
-        </Button>
-        <Button>Log out</Button>
+        <Link to="/news">
+          <Button isGhost={true}>
+            <LibraryBooks />
+            News
+          </Button>
+        </Link>
+        <Link to="/friendrequests">
+          <Button isGhost={true}>
+            <GroupAdd />
+            Friend Requests
+          </Button>
+        </Link>
+        <Link to="/users/a">
+          <Button isGhost={true}>
+            <AccountCircle />
+            My profile
+          </Button>
+        </Link>
+        <Link to="/logout">
+          <Button>Log out</Button>
+        </Link>
       </nav>
     </header>
   );

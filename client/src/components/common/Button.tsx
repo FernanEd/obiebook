@@ -59,12 +59,12 @@ const Button: React.FunctionComponent<Props> = ({
   const buttonSize = (() => {
     switch (size) {
       case "sm":
-        return "text-sm p-1";
+        return "gap-0 text-sm p-1";
       case "lg":
-        return "text-lg p-3";
+        return "gap-1 text-lg p-3";
       case "md":
       default:
-        return "p-2";
+        return "gap-1  p-2";
     }
   })();
 
@@ -72,15 +72,16 @@ const Button: React.FunctionComponent<Props> = ({
     <button
       className={`
     ${buttonColor}
-    ${buttonSize}
+    
     ${isGhost ? "" : "rounded shadow"}
-    inline-flex justify-center items-center
+    inline-flex justify-center 
     filter hover:brightness-90
   `}
       {...props}
     >
-      <div className="w-0"></div>
-      <div className="flex gap-1">{children}</div>
+      <div className={` flex ${buttonSize} justify-center items-center`}>
+        {children}
+      </div>
     </button>
   );
 };

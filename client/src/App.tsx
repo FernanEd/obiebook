@@ -17,14 +17,14 @@ const App: React.FunctionComponent<Props> = () => {
     <>
       <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/news" exact>
             <Newsfeed />
           </Route>
-          <Route path="/login">
-            <Loginpage />
-          </Route>
-          <Route path="/users/:id">
+          <Route path="/users/:id" exact>
             <Userpage />
+          </Route>
+          <Route path="/login" exact>
+            <Loginpage />
           </Route>
         </Switch>
       </Router>
