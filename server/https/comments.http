@@ -1,0 +1,28 @@
+GET http://localhost:4001/api/comments
+
+###
+
+POST http://localhost:4001/api/comments
+Content-Type: application/json
+
+{
+  "content" : "que bueno",
+  "author" : "60a145f9576a1a2faf8a6350",
+  "originalPost" : "60a1471eec747e308673f5c4",
+  "likes" : 2
+}
+
+###
+
+PUT http://localhost:4001/api/comments
+Content-Type: application/json
+
+{
+  "username" : "dudeFEED",
+  "password" : "fernando123",
+  "friends" : []
+}
+
+###
+
+DELETE http://localhost:4001/api/comments

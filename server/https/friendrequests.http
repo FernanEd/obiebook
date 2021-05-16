@@ -1,0 +1,26 @@
+GET http://localhost:4001/api/friendrequests
+
+###
+
+POST http://localhost:4001/api/friendrequests
+Content-Type: application/json
+
+{
+  "receiver" : "60a14702ec747e308673f5c2",
+  "sender" : "60a145f9576a1a2faf8a6350"
+}
+
+###
+
+PUT http://localhost:4001/api/friendrequests
+Content-Type: application/json
+
+{
+  "username" : "dudeFEED",
+  "password" : "fernando123",
+  "friends" : []
+}
+
+###
+
+DELETE http://localhost:4001/api/friendrequests

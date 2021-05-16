@@ -1,0 +1,27 @@
+GET http://localhost:4001/api/posts
+
+###
+
+POST http://localhost:4001/api/posts
+Content-Type: application/json
+
+{
+  "content" : "Hola soy la moni",
+  "author" : "60a145f9576a1a2faf8a6350",
+  "likes" : 2
+}
+
+###
+
+PUT http://localhost:4001/api/posts
+Content-Type: application/json
+
+{
+  "username" : "dudeFEED",
+  "password" : "fernando123",
+  "friends" : []
+}
+
+###
+
+DELETE http://localhost:4001/api/posts

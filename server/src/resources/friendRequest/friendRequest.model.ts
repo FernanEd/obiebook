@@ -8,7 +8,11 @@ const FriendRequestSchema = new Schema({
   receiver: { type: Types.ObjectId, ref: "User", required: true },
   sender: { type: Types.ObjectId, ref: "User", required: true },
   timestamp: { type: Date, default: Date() },
-  status: { type: String, enum: ["pending", "declined", "accepted"] },
+  status: {
+    type: String,
+    enum: ["pending", "declined", "accepted"],
+    default: "pending",
+  },
 });
 
 export default model<IFriendRequest>("FriendRequest", FriendRequestSchema);
