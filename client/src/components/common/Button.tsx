@@ -74,12 +74,13 @@ const Button: React.FunctionComponent<Props> = ({
     ${buttonColor}
     ${buttonSize}
     ${isGhost ? "" : "rounded shadow"}
-    inline-flex justify-center items-center gap-1
+    inline-flex justify-center items-center
     filter hover:brightness-90
   `}
       {...props}
     >
-      {children}
+      <div className="w-0"></div>
+      <div className="flex gap-1">{children}</div>
     </button>
   );
 };

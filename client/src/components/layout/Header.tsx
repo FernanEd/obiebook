@@ -1,29 +1,45 @@
 import React, { useState } from "react";
-import { LibraryBooks, GroupAdd } from "@material-ui/icons";
+import {
+  LibraryBooks,
+  GroupAdd,
+  AccountCircle,
+  MeetingRoom,
+} from "@material-ui/icons";
 import Button from "../common/Button";
 
 interface Props {}
 
 const Header: React.FunctionComponent<Props> = () => {
   return (
-    <header className=" bg-secondary-400 text-white shadow-md p-2">
+    <header
+      className="
+      bg-secondary-400 text-white shadow-md p-2 
+      flex justify-between items-center
+      px-8
+     "
+    >
       <div
         id="logo"
         className="
-          text-xl font-bold
+          text-3xl font-bold
         "
       >
         Obiebook
       </div>
-      <nav className="">
+      <nav className="flex gap-2 items-center">
         <Button isGhost={true}>
           <LibraryBooks />
           News
         </Button>
-        <Button>
+        <Button isGhost={true}>
           <GroupAdd />
-          News
+          Friend Requests
         </Button>
+        <Button isGhost={true}>
+          <AccountCircle />
+          My profile
+        </Button>
+        <Button>Log out</Button>
       </nav>
     </header>
   );
