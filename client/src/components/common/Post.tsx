@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import { ThumbUp } from "@material-ui/icons";
 import CommentSection from "./CommentSection";
 import { IPost } from "../../utils/interfaces";
+import formatDate from "../../utils/formatDate";
 
 interface Props {}
 
-const Post: React.FunctionComponent<IPost> = ({
+const Post: React.FunctionComponent<IPost & { _id: string }> = ({
+  _id,
   author,
   content,
   likes,
@@ -19,8 +21,10 @@ const Post: React.FunctionComponent<IPost> = ({
       p-2 w-full
       "
     >
-      <p className="text-primary-300 font-bold">{author}</p>
-      <p className="text-neutral-400">{timestamp}</p>
+      <p className="text-primary-300 font-bold">
+        {typeof author !== "string" ? author.username : author}
+      </p>
+      <p className="text-neutral-400">{formatDate(timestamp)}</p>
       <p>{content}</p>
       <p className="text-sm text-secondary-300">{likes} likes.</p>
 
@@ -31,7 +35,7 @@ const Post: React.FunctionComponent<IPost> = ({
 
       <hr className="my-2" />
 
-      <CommentSection postID="a" />
+      <CommentSection postID={_id} />
     </article>
   );
 };

@@ -32,7 +32,9 @@ const Newsfeed: React.FunctionComponent<Props> = () => {
         flex flex-col gap-2
         "
       >
-        {/* <Post /> */}
+        {posts?.map((post) => (
+          <Post key={post._id} {...post} />
+        ))}
       </section>
     </Page>
   );
