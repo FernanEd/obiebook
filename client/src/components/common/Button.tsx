@@ -5,9 +5,12 @@ interface Props {
     | "success"
     | "warning"
     | "danger"
-    | "disabled";
+    | "disabled"
+    | "light"
+    | "dark";
   size?: "sm" | "md" | "lg";
   isGhost?: boolean;
+  extendStyle?: string;
   [x: string]: any;
 }
 
@@ -17,6 +20,7 @@ const Button: React.FunctionComponent<Props> = ({
   size,
   isGhost,
   icon,
+  extendStyle,
   ...props
 }) => {
   const buttonColor = (() => {
@@ -34,8 +38,11 @@ const Button: React.FunctionComponent<Props> = ({
           return "text-danger-300";
         case "disabled":
           return "text-neutral-200";
-        default:
+        case "light":
           return "text-white";
+        case "dark":
+        default:
+          return "text-neutral-600";
       }
     }
 
@@ -53,6 +60,10 @@ const Button: React.FunctionComponent<Props> = ({
         return "bg-danger-300 text-white";
       case "disabled":
         return "bg-neutral-400 text-neutral-200";
+      case "light":
+        return "bg-neutral-200 text-neutral-600";
+      case "dark":
+        return "bg-neutral-600 text-white";
     }
   })();
 
@@ -72,16 +83,15 @@ const Button: React.FunctionComponent<Props> = ({
     <button
       className={`
     ${buttonColor}
-    
+    ${buttonSize}
     ${isGhost ? "" : "rounded shadow"}
-    inline-flex justify-center 
-    filter hover:brightness-90
+    inline-flex justify-center items-center 
+    filter hover:brightness-75
+    ${extendStyle}
   `}
       {...props}
     >
-      <div className={` flex ${buttonSize} justify-center items-center`}>
-        {children}
-      </div>
+      {children}
     </button>
   );
 };
